@@ -124,7 +124,7 @@ const css = {
 };
 
 gulp.task('build-admin-css', () => {
-  return gulp.src(css.src)
+  return gulp.src(css.adminSrc)
     .pipe(sass(css.sassOpts))
     .pipe(postcss(css.processors))
     .pipe(rename('cj-testimonial-plugin-admin.min.css'))
@@ -132,7 +132,7 @@ gulp.task('build-admin-css', () => {
 });
 
 gulp.task('build-public-css', () => {
-  return gulp.src(css.src)
+  return gulp.src(css.publicSrc)
     .pipe(sass(css.sassOpts))
     .pipe(postcss(css.processors))
     .pipe(rename('cj-testimonial-plugin-public.min.css'))
