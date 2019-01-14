@@ -73,7 +73,7 @@ class Cj_Testimonial_Plugin_Public {
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/cj-testimonial-plugin-public.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/cj-testimonial-plugin-public.min.css', array(), $this->version, 'all' );
 
 	}
 
@@ -96,8 +96,12 @@ class Cj_Testimonial_Plugin_Public {
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/cj-testimonial-plugin-public.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/cj-testimonial-plugin-public.min.js', array( 'jquery' ), $this->version, true );
 
+	}
+
+	public function testimonial_shortcode() {
+		echo 'Hello. This is a testimonial';
 	}
 
 }

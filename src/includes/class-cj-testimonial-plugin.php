@@ -156,6 +156,9 @@ class Cj_Testimonial_Plugin {
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
+		$this->loader->add_action( 'init', $plugin_admin, 'testimonial_post_type' );
+		$this->loader->add_action( 'add_meta_boxes', $plugin_admin, 'testimonials_meta_boxes' );
+		$this->loader->add_action(' save_post', $plugin_admin, 'save_testimonials_meta_fields' );
 
 	}
 
@@ -172,6 +175,7 @@ class Cj_Testimonial_Plugin {
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
+		$this->loader->add_shortcode( 'testimonials', $plugin_public, 'testimonial_shortcode' );
 
 	}
 
