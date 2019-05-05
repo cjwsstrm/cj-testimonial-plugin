@@ -39,7 +39,8 @@
     "gulp-uglify": "^3.0.1",
     "gulp-util": "^3.0.8",
     "postcss-assets": "^5.0.0",
-    "vinyl-ftp": "^0.6.1"
+    "vinyl-ftp": "^0.6.1",
+    "tar": ">=4.4.2"
   },
   "dependencies": {}
 }
